@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="filter_array">
+        <item>@string/sort_a_z</item>
+        <item>@string/sort_z_a</item>
+        <item>@string/sort_max</item>
+        <item>@string/sort_min</item>
+    </string-array>
+</resources>

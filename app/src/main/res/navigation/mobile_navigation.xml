@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.medicalcounter.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+
+    <fragment
+        android:id="@+id/navigation_organization"
+        android:name="com.example.medicalcounter.ui.organization.OrganizationFragment"
+        android:label="@string/title_organizations"
+        tools:layout="@layout/fragment_organization" >
+        <action
+            android:id="@+id/action_navigation_organization_to_navigation_organization_add_update"
+            app:destination="@id/navigation_organization_add_update" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_medicine"
+        android:name="com.example.medicalcounter.ui.medicine.MedicineFragment"
+        android:label="@string/title_medicines"
+        tools:layout="@layout/fragment_medicine" >
+        <action
+            android:id="@+id/action_navigation_medicine_to_navigation_medicine_add_update"
+            app:destination="@id/navigation_medicine_add_update" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_organization_add_update"
+        android:name="com.example.medicalcounter.ui.organizationAddUpdate.OrganizationAddUpdateFragment"
+        android:label="@string/title_organizations"
+        tools:layout="@layout/fragment_organization_add_update" >
+        <action
+            android:id="@+id/action_navigation_organization_add_update_to_navigation_organization"
+            app:destination="@id/navigation_organization" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_medicine_add_update"
+        android:name="com.example.medicalcounter.ui.medicineAddUpdate.MedicineAddUpdateFragment"
+        android:label="@string/title_medicines"
+        tools:layout="@layout/fragment_medicine_add_update" >
+        <action
+            android:id="@+id/action_navigation_medicine_add_update_to_navigation_medicine"
+            app:destination="@id/navigation_medicine" />
+    </fragment>
+</navigation>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView_organization_title_medicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/textView_organization_title_medicine_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:text="@string/organization_not_found" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName_medicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_organization_title_medicine"
+        android:ems="10"
+        android:hint="@string/medicinename"
+        android:inputType="textPersonName" />
+
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTextPersonName_medicine"
+        android:clickable="true"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Here" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/imageButton_save_medicine"
+        android:layout_below="@id/searchView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="30dp"
+        android:divider="#ad5"
+        android:dividerHeight="1dp" />
+
+
+
+        <ImageButton
+            android:id="@+id/imageButton_save_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_button"
+            android:layout_marginBottom="65dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight ="true"
+            android:layout_alignParentBottom="true"
+            app:srcCompat="@android:drawable/checkbox_on_background" />
+
+    <ImageButton
+        android:id="@+id/imageButton_last_medicine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp"
+        android:background="@drawable/circle_button"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <ImageButton
+        android:id="@+id/imageButton_delete_medicine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="65dp"
+        android:background="@drawable/circle_button"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+</RelativeLayout>
